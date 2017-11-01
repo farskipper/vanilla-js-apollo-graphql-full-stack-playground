@@ -14,7 +14,7 @@ $ npm i
 $ npm start
 ```
 
-Open your browser to the url, and inspect the javascript console.
+Open your browser to the url, and inspect the javascript console or open http://localhost:3000/graphiql to open the GraphiQL interface.
 
 This should be a good starting point. Now you can gradually add and try out more GraphQL features.
 

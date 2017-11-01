@@ -1,3 +1,4 @@
+
 var express = require("express");
 var bodyParser = require("body-parser");
 var browserify = require("browserify");
@@ -5,6 +6,7 @@ var browserify = require("browserify");
 var graphql = require("graphql");
 
 var graphqlExpress = require("apollo-server-express").graphqlExpress;
+var graphiqlExpress = require ("apollo-server-express").graphiqlExpress
 
 var myGraphQLSchema = new graphql.GraphQLSchema({
 
@@ -25,9 +27,8 @@ var myGraphQLSchema = new graphql.GraphQLSchema({
 var app = express();
 
 // bodyParser is needed just for POST.
-app.use("/graphql", bodyParser.json(), graphqlExpress({
-    schema: myGraphQLSchema
-}));
+app.use('/graphql', bodyParser.json(), graphqlExpress({ schema: myGraphQLSchema }));
+app.get('/graphiql', graphiqlExpress({ endpointURL: '/graphql' })); // if you want GraphiQL enabled
 
 
 app.get("/client.js", function(req, res){
