@@ -3,7 +3,9 @@
     "description": "Play with the Apollo GraphQL client and server, without being distracted by databases, frameworks, or transpilers.",
     "private": true,
     "dependencies": {
-        "apollo-client": "^1.9.3",
+        "apollo-cache-inmemory": "^1.0.0",
+        "apollo-client": "^2.0.1",
+        "apollo-link-http": "^1.0.0",
         "apollo-server-express": "^1.1.7",
         "body-parser": "^1.18.2",
         "browserify": "^14.4.0",

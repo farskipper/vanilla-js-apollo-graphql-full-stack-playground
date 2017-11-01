@@ -1,4 +1,3 @@
-
 var express = require("express");
 var bodyParser = require("body-parser");
 var browserify = require("browserify");
@@ -37,7 +36,13 @@ app.get("/client.js", function(req, res){
     b.bundle().pipe(res);
 });
 app.use(function(req, res){
-    res.end("<script src='/client.js'></script>");
+    var html = "<html><body>";
+    html += "Open your javascript console to view the output.";
+    html += "<br/><br/>";
+    html += "Or click <a href='/graphiql?query=%7B%20hello%20%7D'>here</a> to use Graph<i>i</i>QL";
+    html += "<script src='/client.js'></script>";
+    html += "</body></html>";
+    res.end(html);
 });
 
 var port = 3000;

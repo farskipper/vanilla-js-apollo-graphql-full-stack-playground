@@ -1,13 +1,13 @@
-var apollo = require("apollo-client");
+var HttpLink = require("apollo-link-http").HttpLink;
+var ApolloClient = require("apollo-client").ApolloClient;
+var InMemoryCache = require("apollo-cache-inmemory").InMemoryCache;
+
 var gql = require("graphql-tag");
 
 
-var client = new apollo.ApolloClient({
-
-    networkInterface: apollo.createNetworkInterface({
-        uri: "/graphql",
-    }),
-
+var client = new ApolloClient({
+    link: new HttpLink({uri: "/graphql"}),
+    cache: new InMemoryCache(),
 });
 
 
