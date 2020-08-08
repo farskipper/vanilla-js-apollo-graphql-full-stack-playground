@@ -1,3 +1,11 @@
+# OUTDATED!!!
+
+This example of apollo graphql is outdated!
+
+If you want to learn plain graphql, I recommend: [https://graphql.org/learn/](https://graphql.org/learn/)
+
+If you want to learn apollo they have good documentation and examples: [https://www.apollographql.com/docs/](https://www.apollographql.com/docs/)
+
 # vanilla-js-apollo-graphql-full-stack-playground
 
 Play with the Apollo GraphQL client and server, without being distracted by databases, frameworks, or transpilers.
